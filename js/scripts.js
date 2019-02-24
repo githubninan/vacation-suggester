@@ -4,20 +4,20 @@ $(document).ready(function() {
     var age = parseInt($("input#age").val());
     var attractions =$("select#attractions").val();
     var activeStay = $("select#activeStay").val();
-    var geography = $("#select#geography").val();
+    var country = $("input:radio[name=country]:checked").val();
     event.preventDefault();
 
 
 
-    if (geography === 'americas' || geography === 'europe' || geography === 'asia' && attractions === 'mountain' && activeStay === 'yes') {
+    if (country === 'americas' || country === 'europe' || country === 'asia' && attractions === 'mountain' && activeStay === 'yes') {
       $("#result").show()
       $("#gateaway").text("skiing or hiking in the mountains. You could choose countries such as Japan, South Korea, Peru, Swtitzerlad, Armenia");
     }
-    else if (age >= 60 && attractions === 'beach' || activeStay === 'no') {
+    else if (country === 'americas' || country === 'europe' || country === 'oceania' && age >= 60 && attractions === 'beach' || activeStay === 'no') {
       $("#result").show()
       $("#gateaway").text("enjoying sunshine on white sandy beaches. Some of our suggestions are Hawaii, Mexico, Bahamas or Greece.");
     }
-    else if (age <= 60 && attractions === 'organized' && activeStay === 'yes') {
+    else if (country === 'asia' || country === 'europe' || country === 'asia' && attractions === 'mountain'&& age <= 60 && attractions === 'organized' && activeStay === 'yes') {
       $("#result").show()
       $("#gateaway").text("going abroad and disvovering new countries and new cultures. Discover China, Thailand or Japan for ancient easter cultures. Try France, Italy or Spain for medieval western cultures." );
     }

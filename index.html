@@ -45,29 +45,52 @@
         </select>
       </div>
     </div>
-    <div class="form-group">
-      <label for="geography" class="col-sm-2 control-label">What is your preffered geographical area?</label>
-      <div class="col-sm-10">
-        <select id="geography">
-          <option value="asia">Asia</option>
-          <option value="africa">Africa</option>
-          <option value="americas">Americas</option>
-          <option value="europe">Europe</option>
-          <option value="oceania">Oceania</option>
-        </select>
+    <div class="form-group col-sm-10">
+      <label for="geography" >What is your preffered geographical area?</label>
+      <div class="radio">
+        <label>
+          <input type="radio" name="country" value="asia" checked>
+          Asia
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="country" value="americas">
+          Americas
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="country" value="europe">
+          Europe
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="country" value="africa">
+          Africa
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="country" value="oceania">
+          Oceania
+        </label>
       </div>
     </div>
+
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <button type="submit" class="btn btn-primary">See your results</button>
     </div>
   </div>
 </form>
+</div>
 <div id="result">
   <h2>Ready for some suggestions?</h2>
        <p>Your perfect gateaway is <span id="gateaway"></span>. Get ready to pack your things!</p>
-     </div>
-</div>
+ </div>
+
 
   </body>
 </html>
