@@ -4,12 +4,14 @@ $(document).ready(function() {
     var age = parseInt($("input#age").val());
     var attractions =$("select#attractions").val();
     var activeStay = $("select#activeStay").val();
+    var geography = $("#select#geography").val();
+    event.preventDefault();
 
 
 
-    if (age < 60 && attractions === 'mountain' && activeStay === 'yes') {
+    if (geography === 'americas' || geography === 'europe' || geography === 'asia' && attractions === 'mountain' && activeStay === 'yes') {
       $("#result").show()
-      $("#gateaway").text("skiing or hiking in the mountains. You could choose countries such as Peru, Swtitzerlad, Armenia");
+      $("#gateaway").text("skiing or hiking in the mountains. You could choose countries such as Japan, South Korea, Peru, Swtitzerlad, Armenia");
     }
     else if (age >= 60 && attractions === 'beach' || activeStay === 'no') {
       $("#result").show()
@@ -23,11 +25,19 @@ $(document).ready(function() {
       $("#result").show()
       $("#gateaway").text("surfing in Australia, snorkeling in Egypt or diving in Alaska." );
     }
+    else if (attractions === 'beach' && activeStay === 'yes') {
+      $("#result").show()
+      $("#gateaway").text("surfing in Australia, snorkeling in Egypt or diving in Alaska." );
+    }
+
+    else {
+      $("#result").text("Please call 555-55-55 for further inquiries.");
+    }
 
 
+    $("#result").fadeIn();
+    $("#quiz").fadeOut();
 
-    $("#result").show();
-    event.preventDefault();
 
   });
 });
