@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Celebrity quizz</title>
+    <title>Vacation suggester</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.3.1.js"></script>
@@ -27,46 +27,33 @@
     </div>
 
     <div class="form-group">
-      <label for="stay" class="col-sm-2 control-label">What type of retreat you prefer?</label>
+      <label for="attractions" class="col-sm-2 control-label">What type of attractions you prefer?</label>
       <div class="col-sm-10">
-        <select id="stay">
-          <option value="fair">Mountains</option>
-          <option value="brown">Sea</option>
-          <option value="fair">Road Trip</option>
-          <option value="brown">Camping</option>
-          <option value="brown">Cruise</option>
-
+        <select id="attractions">
+          <option value="mountain">Mountains</option>
+          <option value="beach">Beach</option>
+          <option value="organized">Organized cultural</option>
         </select>
       </div>
     </div>
     <div class="form-group">
-      <label for="gender" class="col-sm-2 control-label">Gender</label>
+      <label for="stay" class="col-sm-2 control-label">Do you like active stay?</label>
       <div class="col-sm-10">
-        <select id="gender">
-          <option value="female">Female</option>
-          <option value="male">Male</option>
+        <select id="activeStay">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
         </select>
       </div>
-
     </div>
-
-<div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <div class="checkbox">
-        <label>
-          <input type="checkbox"> Remember me
-        </label>
-      </div>
-    </div>
-  </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default">See your results</button>
+      <button type="submit" class="btn btn-primary">See your results</button>
     </div>
   </div>
 </form>
 <div id="result">
-       <p>Your celebrity result is <span id="celebrity"></span>! How cool is that!</p>
+  <h2>Ready for some suggestions?</h2>
+       <p>Your perfect gateaway is <span id="gateaway"></span>. Get ready to pack your things!</p>
      </div>
 </div>
 
