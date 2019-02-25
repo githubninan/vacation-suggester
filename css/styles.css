@@ -18,3 +18,9 @@ body{
   margin-left: 25%;
   margin-top: 15%;
 }
+#resultCall {
+  display: none;
+  background-color: #E0FFFF;
+  margin-left: 25%;
+  margin-top: 15%;
+}
