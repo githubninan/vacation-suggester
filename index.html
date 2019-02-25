@@ -1,97 +1,99 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Vacation suggester</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scripts.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <form class="jumbotron form-horizontal" id="quiz">
-        <h2>What is your dream vacation destination?</h2>
-        <h3>Please answer the questions below and discover your perfect gateaway. </h3>
-  <div class="form-group">
-    <label for="Name" class="col-sm-2 control-label">What is your name?</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="name" placeholder="Please insert your name">
-    </div>
+<head>
+  <meta charset="utf-8">
+  <title>Vacation suggester</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <form class="jumbotron form-horizontal" id="quiz">
+      <h2>What is your dream vacation destination?</h2>
+      <h3>Please answer the questions below and discover your perfect gateaway. </h3>
+
+      <div class="form-group">
+        <label for="Name" class="col-sm-2 control-label">What is your name?</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="name" placeholder="Please insert your name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="age" class="col-sm-2 control-label">How old are you?</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="age" placeholder="Please insert your age.">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="attractions" class="col-sm-2 control-label">What type of attractions you prefer?</label>
+        <div class="col-sm-10">
+          <select id="attractions">
+            <option value="mountain">Mountains</option>
+            <option value="beach">Beach</option>
+            <option value="organized">Organized cultural</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="stay" class="col-sm-2 control-label">Do you like active stay?</label>
+        <div class="col-sm-10">
+          <select id="activeStay">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group col-sm-10">
+        <label for="geography" >What is your preffered geographical area?</label>
+        <div class="radio">
+          <label>
+            <input type="radio" name="country" value="asia" checked>
+            Asia
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="country" value="americas">
+            Americas
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="country" value="europe">
+            Europe
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="country" value="africa">
+            Africa
+          </label>
+        </div>
+        <div class="radio">
+          <label>
+            <input type="radio" name="country" value="oceania">
+            Oceania
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-primary">See your results</button>
+        </div>
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="age" class="col-sm-2 control-label">How old are you?</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="age" placeholder="Please insert your age.">
-    </div>
-    </div>
-
-    <div class="form-group">
-      <label for="attractions" class="col-sm-2 control-label">What type of attractions you prefer?</label>
-      <div class="col-sm-10">
-        <select id="attractions">
-          <option value="mountain">Mountains</option>
-          <option value="beach">Beach</option>
-          <option value="organized">Organized cultural</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="stay" class="col-sm-2 control-label">Do you like active stay?</label>
-      <div class="col-sm-10">
-        <select id="activeStay">
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-group col-sm-10">
-      <label for="geography" >What is your preffered geographical area?</label>
-      <div class="radio">
-        <label>
-          <input type="radio" name="country" value="asia" checked>
-          Asia
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="country" value="americas">
-          Americas
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="country" value="europe">
-          Europe
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="country" value="africa">
-          Africa
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="country" value="oceania">
-          Oceania
-        </label>
-      </div>
-    </div>
-
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-primary">See your results</button>
-    </div>
+  <div class="center-block jumbotron col-sm-6" id="result">
+    <h2>Ready for some suggestions?</h2>
+    <h3><span id="personName"></span>, set sails!</h3>
+    <p>Your perfect gateaway is <span id="gateaway"></span> Get ready to pack your things! </p>
   </div>
-</form>
-</div>
-<div class="center-block jumbotron col-sm-6" id="result">
-  <h2>Ready for some suggestions?</h2>
-  <h3><span id="personName"></span>, set sails!</h3>
-  <p>Your perfect gateaway is <span id="gateaway"></span> Get ready to pack your things! </p>
- </div>
 
-
-  </body>
+</body>
 </html>

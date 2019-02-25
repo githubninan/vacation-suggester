@@ -28,15 +28,11 @@ $(document).ready(function() {
 
     else {
       $("#result").text("Please call 555-55-55 for further inquiries.");
-
     }
 
     $("#personName").text(name);
     $("#quiz").fadeOut();
     $("#result").fadeIn();
-
-
-
 
   });
 });
