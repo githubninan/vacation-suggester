@@ -32,8 +32,9 @@ $(document).ready(function() {
     }
 
     $("#personName").text(name);
-    $("#result").fadeIn();
     $("#quiz").fadeOut();
+    $("#result").fadeIn();
+
 
 
 

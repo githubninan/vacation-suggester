@@ -15,12 +15,16 @@ _This page is a survey about travel preferences, with some travel destination su
 * _select an answer from radio buttons and selections_
 
 
-
 _For opening it with chrome you should right click then choose the "open with" button._
 
 ## Known Bugs
 
 _Known issues: the file is still under construction._
+
+## GitHub
+
+_https://github.com/githubninan/vacation-suggester_
+
 
 ## Support and contact details
 

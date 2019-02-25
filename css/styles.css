@@ -1,5 +1,20 @@
-
+body{
+  background-image: url("https://www.libertytravel.com/sites/default/files/styles/full_size/public/Maldives-hero.jpg?itok=gQEIk2C3");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jumbotron {
+  margin-top: 19%;
+  background-color: #E0FFFF;
+   color: #008B8B	;
+   font-weight: 8px;
+   font-weight:lighter;
+}
 
 #result {
   display: none;
+  background-color: #E0FFFF;
+  margin-left: 25%;
+  margin-top: 15%;
 }
